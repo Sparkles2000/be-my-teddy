@@ -5,7 +5,7 @@ class TeddiesController < ApplicationController
 
      # GET /teddies
   def index
-    teddies = Teddy.all.order(content: :desc)
+    teddies = Teddy.all
     render json: teddies
   end
 
