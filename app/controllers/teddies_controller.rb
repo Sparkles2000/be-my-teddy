@@ -31,7 +31,7 @@ class TeddiesController < ApplicationController
 
      # DELETE /teddies/:id
    def destroy
-    teddy = teddy.find_by(id: params[:id])
+    teddy = Teddy.find_by(id: params[:id])
     teddy.destroy
     head :no_content
   end
@@ -47,7 +47,7 @@ class TeddiesController < ApplicationController
       end
 
       def teddy_params
-        params.permit( :name, :image, :age, :gender, :story)
+        params.permit(:name, :image, :age, :gender, :story)
       end
 
 
