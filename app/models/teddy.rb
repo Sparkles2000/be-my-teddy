@@ -1,0 +1,2 @@
+class Teddy < ApplicationRecord
+end
